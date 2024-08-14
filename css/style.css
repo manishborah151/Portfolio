@@ -641,7 +641,7 @@ position: relative;
       cursor: pointer;
       padding: 14px 16px;
       transition: 0.3s;
-      border-radius:30px
+      border-radius:30px;
       color: white;
       transition: all ease 1s ;
 
