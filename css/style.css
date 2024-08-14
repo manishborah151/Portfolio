@@ -643,7 +643,6 @@ position: relative;
       transition: 0.3s;
       border-radius:30px
       color: white;
-     
       transition: all ease 1s ;
 
       
@@ -653,12 +652,14 @@ position: relative;
     .tab button:hover {
       background-color: #ff4d5a;
       border-radius: 0px;
+      border:none;
     }
 
 
     /* Create an active/current tablink class */
     .tab button.active {
       background-color: #ff4d5a;
+       border:none;
       border-radius: 0px;
     }
 
