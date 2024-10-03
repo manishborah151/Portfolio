@@ -130,7 +130,8 @@ position: relative;
 .object3{ position: relative;
 color: white;
 padding: 5px 15px;
-font-weight: 100;
+    line-height: 1.6;
+         font-weight: 100;
 }
 
 .right{
@@ -255,7 +256,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 p{letter-spacing: 2px;}
 
     
-      .leftHead ul,li{
+      .leftHead ul, li{
           float: left;
           color: white;
           text-decoration: none;
