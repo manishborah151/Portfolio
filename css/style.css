@@ -408,10 +408,12 @@ p{letter-spacing: 2px;}
       }
       .bio{
           color: white;
-          padding: 25px 50px;
+          padding: 18px 24px;
           text-align: center;
           font-weight: 100;
           position: relative;
+        line-height: 1.4;
+        font-family: Poppins, sans-serif;
          
       }
   .rightAbout{
