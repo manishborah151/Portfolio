@@ -25,7 +25,7 @@ body{
 position: relative;
   overflow-x: hidden;
  background-color: #000;
-  font-family: "Lucida Console", Courier, monospace;
+  font-family:  Courier, monospace;
 }
 .dropbtn{
 display: none;
