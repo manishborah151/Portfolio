@@ -25,7 +25,7 @@ body{
 position: relative;
   overflow-x: hidden;
  background-color: #000;
-  font-family:  Courier, monospace;
+   font-family: Poppins, sans-serif;
 }
 .dropbtn{
 display: none;
@@ -478,7 +478,7 @@ p{letter-spacing: 2px;}
 .skills{
   clear: both;
   height: 450px;
-  position:relative; 
+  position: relative; 
   display: flex;
   justify-content: center;
   align-items: center;    
