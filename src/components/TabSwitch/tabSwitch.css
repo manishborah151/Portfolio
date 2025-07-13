@@ -1,0 +1,60 @@
+.tab-container {
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.tab-header {
+  position: relative;
+  display: flex;
+  background-color: hsl(from var(--bg) h s l / 0.8);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* .tab-btn.active {
+  color: #3498db;
+} */
+
+.active-indicator {
+  position: absolute;
+  bottom: 4px;
+  top: 4px;
+  width: 48%;
+  margin-left: 8px;
+  background-color: hsl(from var(--bg) h s calc(l + 10) / 0.8);
+  transition: left 0.3s ease;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.tab-content-wrapper {
+  overflow: hidden;
+  height: 300px; /* Optional fixed height */
+  position: relative;
+}
+
+.tab-content-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 200%; /* because we have 2 contents */
+}
+
+.tab-content {
+  width: 100%;
+  flex-shrink: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}

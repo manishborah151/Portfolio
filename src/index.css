@@ -9,8 +9,7 @@
 
   --bg: hsl(206, 55%, 14%);
   --text: hsl(300 0% 95%);
-  --border: hsl(0, 0%, 88%);
-
+  --border: hsl(0, 0%, 67%);
   --primary: hsl(179, 36%, 45%);
   --secondary: hsl(209, 24%, 27%);
 
@@ -23,7 +22,7 @@
 [data-theme="light"] {
   --bg: hsl(178, 40%, 87%);
   --text: #263339;
-  --border: hsl(200, 18%, 53%);
+  --border: hsl(200, 7%, 41%);
 
   --primary: hsl(168, 94%, 50%);
   --secondary: hsl(198, 94%, 50%);

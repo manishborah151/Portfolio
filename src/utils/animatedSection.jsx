@@ -6,15 +6,16 @@ const variants = {
   visible: {opacity: 1, y: 0},
 };
 
-const AnimatedSection = ({children}) => {
+const AnimatedSection = ({children, className}) => {
   const {ref, inView} = useInView({
     threshold: 0.2,
-    triggerOnce: false,
+    triggerOnce: true, // Only animate once
   });
 
   return (
     <motion.div
       ref={ref}
+      className={className}
       variants={variants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

@@ -9,8 +9,8 @@
 }
 .appIcon:hover a {
   color: var(--text);
-  transform: scale(1.8);
-  box-shadow: 1px 4px 8px var(--border);
+  transform: scale(1.5);
+  box-shadow: 1px 4px 8px hsl(from var(--border) calc(h - 10) s l);
 }
 
 /* Right side */
@@ -20,10 +20,10 @@
   margin-top: calc(-25px + var(--dock-offset-right, 0px) * -1);
 }
 .appIcon:hover + .appIcon a {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 .appIcon:hover + .appIcon + .appIcon a {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .appIcon:hover + .appIcon + .appIcon {
@@ -39,7 +39,7 @@
   margin-top: calc(-25px + var(--dock-offset-left, 0px) * -1);
 }
 .appIcon:has(+ .appIcon:hover a) {
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 
 .appIcon:has(+ .appIcon + .appIcon:hover) {
@@ -49,18 +49,19 @@
 }
 
 .appIcon:has(+ .appIcon + .appIcon:hover a) {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
-.container {
+.nav-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: fixed;
   bottom: 1rem;
   width: 100%;
   height: 70px;
+  z-index: 1000;
 }
 .dock {
-  height: 40px;
+  height: 50px;
   display: flex;
   gap: 5rem;
   margin: auto;
@@ -86,8 +87,8 @@
 }
 
 .appIcon {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -100,11 +101,11 @@
   box-shadow: rgba(160, 160, 160, 0.116) 0px 0px 0px 1px inset;
   display: block;
   border-radius: 50%;
-  color: var(--text-muted);
+  color: var(--text);
   background-image: linear-gradient(to top, rgba(255, 255, 255, 0), var(--bg));
   backdrop-filter: blur(5px);
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -128,11 +129,12 @@
   opacity: 0;
   transition: ease-in opacity 100ms;
   display: block;
-  background: var(--bg-dark);
+  background: hsl(from var(--bg) h s calc(l + 10) / 0.6);
   padding: 2px 6px;
   border-radius: 12px;
-  font-size: 0.6rem;
-  color: var(--text-muted);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--text);
   width: auto;
   box-shadow: rgba(0, 0, 0, 0.17) 0px 12px 8px 1px;
   white-space: nowrap;
@@ -149,7 +151,7 @@
 }
 
 .source-links a {
-  color: #fff;
+  color: var(--text);
   opacity: 0.3;
   margin-bottom: 8px;
 }
@@ -174,6 +176,7 @@
       rgba(255, 255, 255, 0),
       var(--bg)
     );
+
     backdrop-filter: blur(5px);
     height: 30px;
     width: 30px;

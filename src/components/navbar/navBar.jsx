@@ -85,57 +85,47 @@ function NavBar() {
     },
   ];
   return (
-    <div className="page">
-      <div className="container">
-        <nav ref={dockRef} className="dock">
+    <div className="nav-container">
+      <nav ref={dockRef} className="dock">
+        <ul>
+          {Items.map((app, index) => (
+            <li className="appIcon" onMouseMove={handleAppHover} key={index}>
+              <a
+                onClick={() => handleScroll(app.target)}
+                rel="noopener noreferrer"
+              >
+                {app.icon}
+                <span className="tooltip">{app.tooltip}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <nav ref={dockRef} className="dock externalDock">
+        <ul>
           <ul>
-            {Items.map((app, index) => (
+            {ExternalItems.map((app, index) => (
               <li className="appIcon" onMouseMove={handleAppHover} key={index}>
-                <a
-                  onClick={() => handleScroll(app.target)}
-                  rel="noopener noreferrer"
-                >
+                <a href={app.target} rel="noopener noreferrer" target="_blank">
                   {app.icon}
                   <span className="tooltip">{app.tooltip}</span>
                 </a>
               </li>
             ))}
+            <li className="appIcon" onMouseMove={handleAppHover}>
+              <a
+                className="theme-toggle"
+                onClick={toggleTheme}
+                data-tooltip="Theme Toggle"
+                target="_blank"
+              >
+                {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+                <span className="tooltip">Toggle Theme</span>
+              </a>
+            </li>
           </ul>
-        </nav>
-        <nav ref={dockRef} className="dock externalDock">
-          <ul>
-            <ul>
-              {ExternalItems.map((app, index) => (
-                <li
-                  className="appIcon"
-                  onMouseMove={handleAppHover}
-                  key={index}
-                >
-                  <a
-                    href={app.target}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {app.icon}
-                    <span className="tooltip">{app.tooltip}</span>
-                  </a>
-                </li>
-              ))}
-              <li className="appIcon" onMouseMove={handleAppHover}>
-                <a
-                  className="theme-toggle"
-                  onClick={toggleTheme}
-                  data-tooltip="Theme Toggle"
-                  target="_blank"
-                >
-                  {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
-                  <span className="tooltip">Toggle Theme</span>
-                </a>
-              </li>
-            </ul>
-          </ul>
-        </nav>
-      </div>
+        </ul>
+      </nav>
     </div>
   );
 }

@@ -1,0 +1,37 @@
+.hello-loader {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.hello-loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hello-text {
+  font-size: 3rem;
+  font-weight: bold;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-out {
+  opacity: 0;
+  transform: translateY(-30px); /* slide up */
+}
+
+.hidden-start {
+  transform: translateY(-30px); /* appear from below */
+  opacity: 0;
+}
