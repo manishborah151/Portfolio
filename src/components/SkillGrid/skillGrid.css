@@ -10,7 +10,7 @@
   overflow: hidden;
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
-  transform: scale(1.5);
+
   mask-image: radial-gradient(
     circle,
     rgba(0, 0, 0, 1) 24%,
@@ -21,7 +21,8 @@
 .grid-box {
   width: 70px;
   height: 70px;
-  background-color: hsl(from var(--bg) h s calc(l + 10));
+  background-color: hsl(from var(--bg) h s calc(l + 10) / 0.2);
+  box-shadow: inset 1px 1px 8px hsl(from var(--border) h s l / 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,6 +42,7 @@
   color: var(--text);
   font-size: 2rem;
 }
+
 .icon img {
   width: 42px;
   height: 42px;

@@ -20,15 +20,9 @@ const projects = [
   {
     title: "Ravi Pratap Singh Studio",
     badge: (
-      <span
-        style={{
-          borderRadius: "2rem",
-          backgroundColor: "var(--info)",
-          padding: "0 6px",
-        }}
-      >
-        <Tag size={10} style={{paddingRight: "4px"}} />
+      <span>
         Client
+        <Tag size={18} style={{paddingLeft: "6px"}} />
       </span>
     ),
     image: img2,
@@ -74,7 +68,7 @@ export default function ProjectSection() {
             <div className="project-content">
               <div className="head-text">
                 <h3>{project.title}</h3>
-                <span>{project.badge}</span>
+                <i>{project.badge}</i>
               </div>
               <p>{project.description}</p>
               <div className="project-btns">

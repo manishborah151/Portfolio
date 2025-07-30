@@ -3,11 +3,12 @@
   padding: 0;
 }
 :root {
-  color-scheme: light dark;
   font-synthesis: none;
   scrollbar-width: none;
-
+  color-scheme: light dark;
+  background-color: hsl(from var(--bg) h s l);
   --bg: hsl(206, 55%, 14%);
+
   --text: hsl(300 0% 95%);
   --border: hsl(0, 0%, 67%);
   --primary: hsl(179, 36%, 45%);
@@ -20,9 +21,9 @@
 }
 
 [data-theme="light"] {
-  --bg: hsl(178, 40%, 87%);
+  --bg: hsl(180, 100%, 95%);
   --text: #263339;
-  --border: hsl(200, 7%, 41%);
+  --border: hsl(0, 0%, 0%);
 
   --primary: hsl(168, 94%, 50%);
   --secondary: hsl(198, 94%, 50%);

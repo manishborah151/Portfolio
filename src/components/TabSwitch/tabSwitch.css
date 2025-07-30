@@ -7,7 +7,8 @@
 .tab-header {
   position: relative;
   display: flex;
-  background-color: hsl(from var(--bg) h s l / 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 1px 1px 8px hsl(from var(--border) h s l / 0.4);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -20,7 +21,9 @@
   font-size: 16px;
   cursor: pointer;
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  color: var(--text);
+  font-weight: 800;
   transition: color 0.3s ease;
 }
 
@@ -34,15 +37,17 @@
   top: 4px;
   width: 48%;
   margin-left: 8px;
-  background-color: hsl(from var(--bg) h s calc(l + 10) / 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: inset 1px 1px 8px hsl(from var(--border) h s l / 0.4);
+  background-color: hsl(from var(--bg) h s calc(l + 10) / 0.16);
   transition: left 0.3s ease;
   border-radius: 10px;
-  z-index: 0;
+  z-index: 1;
 }
 
 .tab-content-wrapper {
   overflow: hidden;
-  height: 300px; /* Optional fixed height */
+  height: 350px; /* Optional fixed height */
   position: relative;
 }
 

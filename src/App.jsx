@@ -11,6 +11,7 @@ import EduTimeline from "./components/timeline/eduTimeline";
 import SkillGrid from "./components/SkillGrid/skillGrid";
 import ProjectGrid from "./components/prgjectGrid/projectGrid";
 import TabSwitch from "./components/TabSwitch/tabSwitch";
+import BlobComponent from "./components/VantaBackground/BlobBackground";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       {loading && <HelloLoader onFinish={() => setLoading(false)} />}
       {!loading && (
         <div className="app" data-theme={theme}>
+          <BlobComponent />
           {/* <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -30,8 +32,7 @@ function App() {
         </a>
       </div> */}
           <NavBar />
-
-          <section className="hero-section" id="home">
+          <section className="hero-section" id="Home">
             <svg width="100%" height="24vh" position="absolute">
               <text x="50%" y="50%">
                 MANISH BORAH
@@ -40,13 +41,14 @@ function App() {
             <AnimatedSection>
               <div className="hero-content">
                 <h2 className="hero-subTittle">
-                  A design-minded <span>Front-End Developer</span>
-                  <br /> focused on building beautiful interfaces & experiences.
+                  A creative <span>Front-End Developer</span> with{" "}
+                  <span>3+ years</span> of experience in
+                  <br /> building beautiful interfaces & experiences.
                 </h2>
               </div>
             </AnimatedSection>
           </section>
-          <section className="about-section">
+          <section className="about-section" id="About">
             <AnimatedSection>
               <div class="grid">
                 <div
@@ -57,28 +59,23 @@ function App() {
                     flexDirection: "column",
                   }}
                 >
-                  <h3></h3>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Impedit, quidem fugit voluptates maxime ab adipisci
-                    doloribus
+                    Specialized in creating seamless and intuitive user
+                    experiences.
                   </p>
                 </div>
                 <div className="box box-2" style={{gridArea: "box-2"}}>
+                  <i className="icon"></i>
                   <h1>LOCATION</h1>
                 </div>
                 <div className="box box-3" style={{gridArea: "box-3"}}>
                   <AnimatedStats />
                 </div>
-                <div className="box box-4" style={{gridArea: "box-4"}}>
-                  {/* -----------TABS---------- */}
-                  <TabSwitch />
-                  {/* -----------TABS---------- */}
-                </div>
+
                 <div
-                  className="box box-5 "
+                  className="box box-4 "
                   style={{
-                    gridArea: "box-5",
+                    gridArea: "box-4",
                     overflow: "hidden",
                   }}
                 >
@@ -87,15 +84,15 @@ function App() {
               </div>
             </AnimatedSection>
           </section>
+          <section className="project-section">
+            <AnimatedSection>
+              <h2 className="section-title">PROJECTS</h2>
+            </AnimatedSection>
+            <AnimatedSection>
+              <ProjectGrid />
+            </AnimatedSection>
+          </section>{" "}
           {/*
-      <section className="project-section">
-        <AnimatedSection>
-          <h2 className="section-title">PROJECTS</h2>
-        </AnimatedSection>
-        <AnimatedSection>
-          <ProjectGrid />
-        </AnimatedSection>
-      </section>
       <section className="contact-section">
         <AnimatedSection></AnimatedSection>
       </section> */}
