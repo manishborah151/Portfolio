@@ -8,8 +8,7 @@
    transform: translateX(-50%);
    left: 50%;
   top: 0;
-  width: 50%;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 0.6rem;
   border-radius: 20px;
   backdrop-filter: blur(6px);
   margin: 0.6rem auto;
@@ -17,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   box-shadow: inset 1px 1px 8px hsl(from var(--border) h s l / 0.4);
   z-index: 999;
 }
 
@@ -26,6 +25,7 @@
   list-style: none;
   gap: 20px;
 }
+
 
 .nav-group.left {
   margin-right: 40px;
@@ -44,6 +44,12 @@
 
 .nav-group li:hover {
   letter-spacing: 2px;
+}
+
+
+.right li:hover {
+  scale: 1.4;
+  
 }
 
 .nav-group a {

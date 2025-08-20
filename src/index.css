@@ -6,7 +6,7 @@
   font-synthesis: none;
   scrollbar-width: none;
   color-scheme: light dark;
-  background-color: hsl(from var(--bg) h s l);
+ 
   --bg: hsl(206, 55%, 14%);
 
   --text: hsl(300 0% 95%);
@@ -20,16 +20,3 @@
   --info: hsl(217 28% 65%);
 }
 
-[data-theme="light"] {
-  --bg: hsl(180, 100%, 95%);
-  --text: #263339;
-  --border: hsl(0, 0%, 0%);
-
-  --primary: hsl(168, 94%, 50%);
-  --secondary: hsl(198, 94%, 50%);
-
-  --danger: hsl(9 26% 64%);
-  --warning: hsl(52 19% 57%);
-  --success: hsl(146 17% 59%);
-  --info: hsl(217 28% 65%);
-}

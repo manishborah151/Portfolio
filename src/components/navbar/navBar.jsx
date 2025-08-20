@@ -4,14 +4,8 @@ import "./Navbar.css";
 import {Sun, Moon, Github,Linkedin, FileUser} from "lucide-react"
 
 const Navbar = () => {
-  const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    document.body.setAttribute("data-theme", theme);
-  }, [theme]);
 
-  const toggleTheme = () =>
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
 
   return (
     <nav className="navbar">
@@ -40,9 +34,7 @@ const Navbar = () => {
     < FileUser size={18} />
     </a>
   </li>
-  <li onClick={toggleTheme} className="theme-toggle" title="Toggle Theme">
-    {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
-  </li>
+ 
 </ul>
 
     </nav>

@@ -1,5 +1,5 @@
 // import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
+import Locationicon from "./assets/icons/location.gif";
 import uselocalstorage from "use-local-storage";
 import React, {useState} from "react";
 import HelloLoader from "./components/pageLoader/HelloLoader";
@@ -47,6 +47,11 @@ function App() {
                 </h2>
               </div>
             </AnimatedSection>
+            <svg class="arrows">
+        <path class="a1" d="M0 0 L30 32 L60 0"></path>
+        <path class="a2" d="M0 20 L30 52 L60 20"></path>
+        <path class="a3" d="M0 40 L30 72 L60 40"></path>
+      </svg>
           </section>
           <section className="about-section" id="About">
             <AnimatedSection>
@@ -65,8 +70,8 @@ function App() {
                   </p>
                 </div>
                 <div className="box box-2" style={{gridArea: "box-2"}}>
-                  <i className="icon"></i>
-                  <h1>LOCATION</h1>
+                  <i className="icon"><img src={Locationicon} alt="location" /></i>
+                  <h1>Delhi NCR, India</h1>
                 </div>
                 <div className="box box-3" style={{gridArea: "box-3"}}>
                   <AnimatedStats />
@@ -83,7 +88,7 @@ function App() {
                 </div>
               </div>
             </AnimatedSection>
-          </section>
+          </section> 
           <section className="project-section">
             <AnimatedSection>
               <h2 className="section-title">PROJECTS</h2>
@@ -91,11 +96,19 @@ function App() {
             <AnimatedSection>
               <ProjectGrid />
             </AnimatedSection>
-          </section>{" "}
-          {/*
+          </section>
+        
       <section className="contact-section">
-        <AnimatedSection></AnimatedSection>
-      </section> */}
+        <AnimatedSection> 
+          <h2 className="contact-Tittle">CONTACT ME</h2>
+          <div className="contact-description">
+            <i> <a href="" className="contctBtn " >manishborah151@gmail.com</a></i>
+            <i> <a href="" className="contctBtn ">+91 6001419617</a></i>
+          
+          </div>
+        </AnimatedSection>
+
+      </section> 
         </div>
       )}
     </>

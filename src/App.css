@@ -6,14 +6,16 @@
 }
 .app {
   width: 100vw;
+   background-color: hsl(from var(--bg) h s l);
 }
 section {
-  padding: 0 2rem 0 2rem;
+ 
   position: relative;
   z-index: 0;
 }
 /* ----hero----- */
 .hero-section {
+   padding: 0 2rem 0 2rem;
   color: var(--text);
   min-height: 100vh;
   display: flex;
@@ -67,10 +69,59 @@ svg text {
   color: var(--primary);
 }
 
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+.arrows path {
+	stroke: #2994D1;
+	fill: transparent;
+	stroke-width: 1px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
 /* ----hero----- */
 
 /* ----About----- */
 .about-section {
+   padding: 0 2rem 0 2rem;
   min-height: 100vh;
   border-radius: 30px;
   margin: 1rem;
@@ -125,7 +176,31 @@ svg text {
 
 /* ----project------ */
 .project-section {
+   padding: 0 2rem 0 2rem;
   position: relative;
   padding: 2rem;
-  min-height: 200vh;
+  min-height: 100vh;
+   
+}
+.contact-Tittle {
+width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+/* contact */
+.contact-section{
+
+}
+.contact-description{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.contctBtn{
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: hsl(from var(--text) h s l);
 }

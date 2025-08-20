@@ -2,9 +2,9 @@ import {Github, ExternalLink, Tag} from "lucide-react";
 import AnimatedSection from "../../utils/animatedSection";
 import "./projectGrid.css";
 import img1 from "../../assets/projects/artboard1.jpg";
-import img2 from "../../assets/projects/artboard2.jpg";
-import img3 from "../../assets/projects/artboard3.jpg";
-import img4 from "../../assets/projects/artboard4.jpg";
+import img2 from "../../assets/projects/artboard1.jpg";
+import img3 from "../../assets/projects/artboard1.jpg";
+import img4 from "../../assets/projects/artboard1.jpg";
 
 const projects = [
   {
